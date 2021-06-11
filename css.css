@@ -46,7 +46,7 @@ span::before{
     0 0 100px #00ff0a;
     transition: 2s;
 }
-span:hover:before{
+span:focus:before{
     transform: scale(1);
     transition: 0s;
 }
