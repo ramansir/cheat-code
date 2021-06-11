@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock Using Pure JS</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styl.css">
+    <link rel="stylesheet" href="prism.css">
+    <script src="prism.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div id="clockContainer">
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="second"></div>
+        <div id="milli"></div>
+    </div>
+    <div class="con">
+        <h1>source code</h1>
+        <ol>
+            <li>
+                <h1>HTML code</h1>
+                <pre class="language-HTML"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Clock Using Pure JS&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styl.css"&gt;
+    &lt;link rel="stylesheet" href="prism.css"&gt;
+    &lt;script src="prism.js"&gt;&lt;/script&gt;
+    &lt;script src="main.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="clockContainer"&gt;
+        &lt;div id="hour"&gt;&lt;/div&gt;
+        &lt;div id="minute"&gt;&lt;/div&gt;
+        &lt;div id="second"&gt;&lt;/div&gt;
+        &lt;div id="milli"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </li>
+            <li>
+                <h1>CSS Code</h1>
+                    <pre class="language-CSS"><code>#clockContainer{
+    position: relative;
+    margin: auto;
+    width: 40vw;
+    height: 40vw;
+    background: url(clock.png) no-repeat;
+    background-size: 100%;
+}
+#hour,#minute,#second{
+    position: absolute;
+    background: black;
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+#hour{
+    width: 2%;
+    height: 26%;
+    top: 24%;
+left: 48.7%;
+opacity: 0.7;
+}
+#minute{
+    width: 1.6%;
+    height: 32%;
+    top: 18%;
+    left: 48.85%;
+    opacity: 0.8;
+}
+#second{
+    width: 1%;
+    height: 40%;
+    top: 10%;
+    left: 49.15%;
+}
+#milli{
+    width: 0.1;
+    height: 40%;
+    top: 10%;
+    left: 49.15%;
+    display: none;
+}
+h1{
+    text-align: center;
+    font-size: 60px;
+    font-family: blackadder ITC;
+}</code></pre>
+            </li>
+<li>
+    <h1>JavaScript Code</h1>
+    <pre class="language-js"><code>setInterval(()=>{
+d = new Date();
+htime = d.getHours();
+mtime = d.getMinutes();
+stime = d.getSeconds();
+millitime = d.getMilliseconds();
+hrotation = 30*htime + mtime/2;
+mrotation = 6*mtime;
+srotation = 6*stime;
+millirotation = 0.36*millitime;
+
+    
+hour.style.transform = `rotate(${hrotation}deg)`;
+minute.style.transform = `rotate(${mrotation}deg)`;
+second.style.transform = `rotate(${srotation}deg)`;
+milli.style.transform = `rotate(${millirotation}deg)`;
+},1000);</code></pre>
+</li>
+        </ol>
+    </div>
+</body>
+
+</html>

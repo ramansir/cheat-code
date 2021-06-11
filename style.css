@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@import "index.css";
+body{
+    background: url(solar.jpeg);
+    background-repeat: repeat-y;
+    background-size: 100vw 100vh;
+}
+.logo{
+    padding: 0 13px;
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #272822;
+    color: white;
+    height: 54px;
+
+}
+.content{
+    font-family: potta one;
+}
+.container{
+    width: 60vw;
+    margin: auto;
+    font-family: roboto;
+    font-weight: bold;
+}
+/* .box{ */
+    /* width: 100vw; */
+    /* height: 100vh; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* background-color: black; */
+/* } */
+/* .box img{ */
+    /* width: 60%; */
+    /* height: 100%; */
+/* } */
+.copy-to-clipboard-button{
+    width: 70px !important;
+    height: 20px !important;
+    border-radius: 5px !important;
+    background: red !important;
+}
+ol{
+    margin-top: 20px;
+}
+a{
+    text-decoration: none;
+    color: white;
+     font-family: roboto;
+     font-weight: bold;
+     margin-left: 20px;
+     font-size: 20px;
+}
